@@ -17,7 +17,8 @@ public class ObserverActiveLevelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_observer_active_level_demo);
+        binding = DataBindingUtil.setContentView(this,
+                R.layout.activity_observer_active_level_demo);
         binding.setLifecycleOwner(this);
         binding.setHandler(this);
         LiveEventBus.config(LiveEventBusDemo.KEY_TEST_ACTIVE_LEVEL_SINGLE)

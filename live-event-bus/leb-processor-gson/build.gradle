@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace "com.jeremyliao.liveeventbus.processor.gson"
     compileSdkVersion 27
 
     defaultConfig {

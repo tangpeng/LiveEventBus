@@ -10,19 +10,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.PostDelayActivity" />
-        <activity android:name=".LiveEventBusDemo">
+        <activity
+            android:name=".activity.PostDelayActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LiveEventBusDemo"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.StickyActivity" />
-        <activity android:name=".activity.TestActivity" />
-        <activity android:name=".activity.ObserverActiveLevelActivity" />
+        <activity
+            android:name=".activity.StickyActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.TestActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ObserverActiveLevelActivity"
+            android:exported="true" />
         <activity
             android:name=".activity.IpcTestActivity"
+            android:exported="true"
             android:process=":ipcTest" />
 
         <service
