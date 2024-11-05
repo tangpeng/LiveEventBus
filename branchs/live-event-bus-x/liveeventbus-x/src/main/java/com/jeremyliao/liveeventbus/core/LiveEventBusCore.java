@@ -1,6 +1,7 @@
 package com.jeremyliao.liveeventbus.core;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
@@ -124,7 +125,11 @@ public final class LiveEventBusCore {
         if (application != null) {
             IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction(IpcConst.ACTION);
-            application.registerReceiver(receiver, intentFilter);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                application.registerReceiver(receiver, intentFilter, Context.RECEIVER_EXPORTED);
+            } else {
+                application.registerReceiver(receiver, intentFilter);
+            }
             isRegisterReceiver = true;
         }
     }
